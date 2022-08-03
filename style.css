@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --fuente: 'Overpass', sans-serif;
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --card-bg: hsl(215, 22%, 15%);
+    --light-bg: hsl(214, 20%, 19%);
+    --body-bg: hsl(228, 11%, 9%);
+    --f-size: 15px;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-size: var(--f-size);
+    font-family: var(--fuente);
+    font-weight: var(--fw-normal);
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card__rating {
+    background-color: var(--card-bg);
+    padding: 30px;
+    max-width: 320px;
+    border-radius: 25px;
+    color: var(--white);
+    display: block;
+}
+
+.card__rating .icon__star {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.card__rating p {
+    color: var(--lightGrey);
+}
+
+.rating-state__number-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.rating-state__number-container__number {
+    background-color: var(--light-bg);
+    padding: 18px 22px;
+    border-radius: 50%;
+    color: var(--lightGrey);
+    cursor: pointer;
+    border: none;
+    font-size: 13px;
+    transition: background-color .4s ease-in-out;
+}
+
+.rating-state__number-container__number:hover {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+
+.rating-state__number-container__number:focus {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.rating-state__submit {
+    width: 100%;
+    padding: 15px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 30px;
+    border: 1px solid var(--orange);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color .4s ease-in-out;
+}
+
+.rating-state__submit:hover {
+    background-color: var(--white);
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.card__thank-you {
+    background-color: var(--card-bg);
+    padding: 30px;
+    max-width: 320px;
+    border-radius: 25px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.card__thank-you img {
+    width: 150px;
+    height: 100px;
+    margin: 0 0 25px 0;
+}
+
+.card__thank-you .rate {
+    background-color: var(--light-bg);
+    color: var(--orange);
+    padding: 6px 19px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.card__thank-you h2 {
+    margin: 30px 0 0 0;
+}
+
+.card__thank-you p {
+    text-align: center;
+    color: var(--lightGrey);
+    font-size: 14px;
+}
